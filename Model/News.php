@@ -28,7 +28,7 @@ class News extends \Magento\Framework\Model\AbstractModel implements NewsInterfa
 
     public function getTitle()
     {
-        return $this->getTitle(self::TITLE);
+        return $this->getData(self::TITLE);
     }
 
     public function setTitle($title)
