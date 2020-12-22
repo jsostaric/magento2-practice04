@@ -9,5 +9,5 @@ $newsList = $newsViewModel->getAllNews();
 
 ?>
 <?php foreach ($newsList as $news): ?>
-    <p><?= $news->getTitle() ?></p>
+    <p><?= $news->getId() . '. ' . $news->getTitle() . ' - ' . $news->getContent() ?></p>
 <?php endforeach ?>

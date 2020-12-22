@@ -36,7 +36,6 @@ class NewsViewModel implements ArgumentInterface
 
     public function getNewsById($id)
     {
-        $news = '';
         try {
             $news = $this->newsRepository->getById($id);
         } catch (NoSuchEntityException $e) {
