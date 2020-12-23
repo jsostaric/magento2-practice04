@@ -4,7 +4,6 @@ namespace Inchoo\Sample04\Model;
 
 use Inchoo\Sample04\Api\Data\NewsInterface;
 use Inchoo\Sample04\Api\NewsRepositoryInterface;
-use Inchoo\Sample04\Api\Data\NewsSearchResultsInterfaceFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
@@ -78,7 +77,7 @@ class NewsRepository implements NewsRepositoryInterface
         try {
             $this->newsResource->save($news);
         } catch (\Exception $exception) {
-           throw new CouldNotSaveException(__($exception->getMessage()));
+            throw new CouldNotSaveException(__($exception->getMessage()));
         }
         return $news;
     }
